@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Credentials
+.env
+.netrc
+
+# Downloaded data (SWOT, NWM, USGS)
+data/
+*.nc
+*.zarr/

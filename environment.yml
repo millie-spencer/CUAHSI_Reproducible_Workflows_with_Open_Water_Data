@@ -1,0 +1,50 @@
+# Conda environment for all the notebooks of Reproducible Workflows with Open Water Data:
+# NASA, NOAA, USGS River Data Access (CUAHSI).
+# Create it once, in a terminal in this folder, then choose the "Python (open-water-data)" kernel:
+#   conda env create -f environment.yml
+#   conda run -n open-water-data python -m ipykernel install --user --name open-water-data --display-name "Python (open-water-data)"
+name: open-water-data
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14
+  - earthaccess               # Module 3 SWOT, Module 4
+  - xarray                    # Module 3 SWOT, Module 3 NWM, Module 4
+  - netcdf4                   # Module 3 SWOT, Module 3 NWM, Module 4
+  - h5netcdf                  # Module 3 SWOT, Module 3 NWM, Module 4
+  - rioxarray                 # Module 3 SWOT, Module 4
+  - numpy                     # Module 3 SWOT
+  - pandas
+  - geopandas
+  - shapely                   # Module 3 SWOT
+  - pyproj                    # Module 3 SWOT, Module 4
+  - requests
+  - matplotlib
+  - pynhd>=0.19               # Module 3 NWM, Module 4
+  - h5py                      # Module 3 NWM, Module 4
+  - zarr>=3                   # Module 3 NWM, Module 4
+  - kerchunk                  # Module 3 NWM, Module 4
+  - fsspec                    # Module 3 NWM, Module 4
+  - gcsfs                     # Module 3 NWM, Module 4
+  - s3fs                      # Module 3 NWM, Module 4
+  - ujson                     # Module 3 NWM
+  - dask                      # Module 3 NWM, Module 4
+  - nest-asyncio              # Module 3 NWM
+  - pytables                  # Module 3 NWM
+  - pint                      # Module 3 NWM
+  - pyarrow                   # Module 3 NWM
+  - google-cloud-storage      # Module 3 NWM
+  - beautifulsoup4            # Module 3 NWM
+  - aiohttp                   # Module 3 NWM
+  - aiofiles                  # Module 3 NWM
+  - adlfs                     # Module 3 NWM
+  - planetary-computer        # Module 3 NWM
+  - dataretrieval>=1.4        # Module 3 WDFN, Module 4
+  # for running the notebooks in Jupyter
+  - ipykernel
+  - jupyterlab
+  - ipywidgets
+  - pip
+  - pip:
+      - hydrotools.nwm_client     # Module 3 NWM
+      - nwmurl                    # Module 3 NWM, Module 4
